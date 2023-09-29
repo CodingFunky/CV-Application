@@ -1,21 +1,21 @@
-import GeneralInfo from "./GeneralInfo.jsx";
-import Education from "./Education.jsx";
-import Experience from "./Experience.jsx";
-// import Counter from "./Counter.jsx";
-import List from "./List.jsx";
+import GeneralInfo from "./Components/GeneralInfo.jsx";
+import Education from "./Components/Education.jsx";
+import Experience from "./Components/Experience.jsx";
+// import Counter from "./Components/Counter.jsx";
+import List from "./Components/List.jsx";
 import "./App.css";
 
 function App() {
   return (
-    <div className="card">
-      <GeneralInfo />
-      <Education />
-      <Experience />
-      <div>
-        <p>Made with:</p>
-        <List />
+    <>
+      <div className="card">
+        <GeneralInfo />
+        <Education />
+        <Experience />
       </div>
-    </div>
+      <span className="madeWith">Made with:</span>
+      <List />
+    </>
   );
 }
 

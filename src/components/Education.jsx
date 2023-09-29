@@ -53,7 +53,7 @@ function Education() {
       {isEditing ? (
         // Render form inputs in editing mode
         <form onSubmit={handleSubmit}>
-          <div className="school-name">
+          <div className="editSchoolName">
             <label>
               School Name:
               <input
@@ -66,7 +66,7 @@ function Education() {
               <span className="error">{errors.schoolName}</span>
             )}
           </div>
-          <div className="study-title">
+          <div className="editStudyTitle">
             <label>
               Study Title:
               <input
@@ -79,7 +79,7 @@ function Education() {
               <span className="error">{errors.studyTitle}</span>
             )}
           </div>
-          <div className="study-date">
+          <div className="editStudyDate">
             <label>
               Study Date:
               <input
@@ -100,7 +100,9 @@ function Education() {
           <p>School Name: {schoolName}</p>
           <p>Study Title: {studyTitle}</p>
           <p>Study Date: {studyDate}</p>
-          <button onClick={() => setIsEditing(true)}>Edit</button>
+          <button className="btn eduButton" onClick={() => setIsEditing(true)}>
+            Edit
+          </button>
         </div>
       )}
     </div>

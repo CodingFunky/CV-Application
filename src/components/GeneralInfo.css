@@ -1,0 +1,81 @@
+.infoCard {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.generalInfoSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    background-color: #4585de;
+    color: white;
+    width: 40em;
+    height: 10em;
+    position: relative;
+  }
+.generalInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+  .name {
+    margin: 0;
+    padding: 0;
+  }
+  .email {
+    padding: 0%;
+    margin: 0%;
+    margin-bottom: 0.5em;
+  }
+  .phone {
+    margin: 1%;
+    padding-bottom: 0.2em;
+  }
+  .infoEditButton {
+    position: absolute;
+    visibility: hidden;
+    top: 0;
+    right: 0;
+    border-top-right-radius: 0%;
+    border-bottom-right-radius: 0%;
+  }
+  .generalInfoSection:hover .infoEditButton {
+    visibility: visible;
+  }
+  .infoForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .editName {
+    padding: 1em;
+    position: absolute;
+    top: 0em;
+    left: 32%;
+  }
+  .editEmail{
+    padding: 0.5em;
+    position: absolute;
+    top: 3.5em;
+    left: 34%;
+  }
+  .editPhone {
+    padding: 0.5em;
+    position: absolute;
+    top: 6em;
+    left: 33%;
+  }
+  .infoSubmitButton {
+    position: absolute;
+    top: 0%;
+    right: 0;
+    border-top-right-radius: 0%;
+    border-bottom-right-radius: 0%;
+  }
+  
