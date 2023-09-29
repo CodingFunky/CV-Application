@@ -1,19 +1,21 @@
-import Greetings, { Info } from "./Greetings.jsx";
-import Counter from "./Counter.jsx";
+import GeneralInfo from "./GeneralInfo.jsx";
+import Education from "./Education.jsx";
+import Experience from "./Experience.jsx";
+// import Counter from "./Counter.jsx";
 import List from "./List.jsx";
 import "./App.css";
 
 function App() {
   return (
-    <>
-      <Greetings />
-      <Info />
+    <div className="card">
+      <GeneralInfo />
+      <Education />
+      <Experience />
       <div>
         <p>Made with:</p>
         <List />
       </div>
-      <Counter />
-    </>
+    </div>
   );
 }
 
