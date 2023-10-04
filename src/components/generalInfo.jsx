@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import { useState } from "react";
-import "./GeneralInfo.css";
+import "./generalInfo.css";
 
 function GeneralInfo(props) {
   const [name, setName] = useState("");
