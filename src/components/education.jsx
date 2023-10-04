@@ -8,6 +8,7 @@ function Education(props) {
   const [studyDate, setStudyDate] = useState("");
   const [isEditing, setIsEditing] = useState(false);
   const [errors, setErrors] = useState({});
+  const [isHovered, setIsHovered] = useState(false);
 
   // Validate the form fields
   const validateForm = () => {
@@ -95,7 +96,11 @@ function Education(props) {
         </form>
       ) : (
         // Render displayed information in view mode
-        <div className="education-info">
+        <div
+          className="education-info"
+          onMouseEnter={() => setIsHovered(true)}
+          onMouseLeave={() => setIsHovered(false)}
+        >
           <p>
             School Name:{" "}
             {schoolName
@@ -120,12 +125,14 @@ function Education(props) {
               ? props.date
               : "Edit to add your study date"}
           </p>
-          <button
-            className="btn editBtn eduButton"
-            onClick={() => setIsEditing(true)}
-          >
-            Edit
-          </button>
+          {isHovered && (
+            <button
+              className="btn editBtn eduButton"
+              onClick={() => setIsEditing(true)}
+            >
+              Edit
+            </button>
+          )}
         </div>
       )}
     </div>
