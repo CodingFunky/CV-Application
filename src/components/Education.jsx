@@ -49,8 +49,6 @@ function Education(props) {
 
   return (
     <div className="education-section">
-      <h2>Educational Experience</h2>
-
       {isEditing ? (
         // Render form inputs in editing mode
         <form onSubmit={handleSubmit}>
@@ -122,7 +120,10 @@ function Education(props) {
               ? props.date
               : "Edit to add your study date"}
           </p>
-          <button className="btn eduButton" onClick={() => setIsEditing(true)}>
+          <button
+            className="btn editBtn eduButton"
+            onClick={() => setIsEditing(true)}
+          >
             Edit
           </button>
         </div>

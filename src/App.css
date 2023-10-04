@@ -12,6 +12,12 @@
   font-weight: bold;
   font-size: 0.8em;
 }
+.editBtn {
+  visibility: hidden;
+}
+.card:hover .editBtn {
+  visibility: visible;
+}
 .card {
   box-shadow: 0 0 12px 4px #ddd;
   height: 100vh;

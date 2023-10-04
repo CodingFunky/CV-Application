@@ -54,7 +54,6 @@ function Experience(props) {
 
   return (
     <div className="education-section">
-      <h2>Work Experience</h2>
       {isEditing ? (
         // Render form inputs in editing mode
         <form onSubmit={handleSubmit}>
@@ -145,7 +144,10 @@ function Experience(props) {
               ? props.end
               : "Edit to add your end date"}
           </p>
-          <button className="btn eduButton" onClick={() => setIsEditing(true)}>
+          <button
+            className="btn editBtn eduButton"
+            onClick={() => setIsEditing(true)}
+          >
             Edit
           </button>
         </div>
