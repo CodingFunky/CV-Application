@@ -1,8 +1,8 @@
 /* eslint-disable no-unused-vars */
-import GeneralInfo from "./Components/generalInfo.jsx";
+import GeneralInfo from "./components/generalInfo.jsx";
 import { useState } from "react";
-import Education from "./Components/education.jsx";
-import Experience from "./Components/experience.jsx";
+import Education from "./components/education.jsx";
+import Experience from "./components/experience.jsx";
 // import Counter from "./Components/Counter.jsx";
 import "./App.css";
 import data from "../data.js";
