@@ -21,41 +21,37 @@ function App() {
     <>
       <div className="card">
         <GeneralInfo
-          name={info.name ? info.name : ""}
-          email={info.email ? info.email : ""}
-          phone={info.phone ? info.phone : ""}
+          name={info && info.name ? info.name : ""}
+          email={info && info.email ? info.email : ""}
+          phone={info && info.phone ? info.phone : ""}
         />
         <div className="appHero">
           <h1>Education</h1>
           <div className="eduContainer">
             <Education
-              name={edu[0].name ? edu[0].name : ""}
-              title={[0][0].title ? edu[0].title : ""}
-              date={edu[0].date ? edu[0].date : ""}
+              name={edu[0] && edu[0].name ? edu[0].name : ""}
+              title={edu[0] && edu[0].title ? edu[0].title : ""}
+              date={edu[0] && edu[0].date ? edu[0].date : ""}
             />
             <Education
-              name={edu[1].name ? edu[1].name : ""}
-              title={edu[1].title ? edu[1].title : ""}
-              date={edu[1].date ? edu[1].date : ""}
+              name={edu[1] && edu[1].name ? edu[1].name : ""}
+              title={edu[1] && edu[1].title ? edu[1].title : ""}
+              date={edu[1] && edu[1].date ? edu[1].date : ""}
             />
           </div>
           <h1>Work History</h1>
           <div className="expContainer">
             <Experience
-              title={exp[0].title ? exp[0].title : ""}
-              responsiblities={
-                exp[0].responsibilities ? exp[0].responsibilities : ""
-              }
-              start={exp[0].start ? exp[0].start : ""}
-              end={exp[0].end ? exp[0].end : ""}
+              title={exp[0]?.title || ""}
+              responsiblities={exp[0]?.responsibilities || ""}
+              start={exp[0]?.start || ""}
+              end={exp[0]?.end || ""}
             />
             <Experience
-              title={exp[1].title ? exp[1].title : ""}
-              responsiblities={
-                exp[1].responsibilities ? exp[1].responsibilities : ""
-              }
-              start={exp[1].start ? exp[1].start : ""}
-              end={exp[1].end ? exp[1].end : ""}
+              title={exp[1]?.title || ""}
+              responsiblities={exp[1]?.responsibilities || ""}
+              start={exp[1]?.start || ""}
+              end={exp[1]?.end || ""}
             />
           </div>
         </div>
