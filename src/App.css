@@ -15,7 +15,7 @@
 .editBtn {
   visibility: hidden;
 }
-.card:hover .editBtn {
+.card:hover .editBtn {  
   visibility: visible;
 }
 .card {
