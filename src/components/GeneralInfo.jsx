@@ -1,7 +1,8 @@
+/* eslint-disable react/prop-types */
 import { useState } from "react";
 import "./GeneralInfo.css";
 
-function GeneralInfo() {
+function GeneralInfo(props) {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
@@ -94,9 +95,27 @@ function GeneralInfo() {
         <>
           <div className="infoCard">
             <div className="generalInfo">
-              <h1 className="name">Ryan Luna</h1>
-              <p className="email">Ryan.namingishard@gmail.com</p>
-              <p className="phone">555-555-5555</p>
+              <h1 className="name">
+                {name
+                  ? name
+                  : props.name
+                  ? props.name
+                  : "Edit to add your info"}
+              </h1>
+              <p className="email">
+                {email
+                  ? email
+                  : props.email
+                  ? props.email
+                  : "Edit to add your email"}
+              </p>
+              <p className="phone">
+                {phone
+                  ? phone
+                  : props.phone
+                  ? props.phone
+                  : "Edit to add your phone number"}
+              </p>
             </div>
           </div>
           <button

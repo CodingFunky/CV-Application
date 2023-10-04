@@ -1,6 +1,7 @@
+/* eslint-disable react/prop-types */
 import { useState } from "react";
 
-function Education() {
+function Education(props) {
   // Define state variables for form fields, errors, and editing mode
   const [schoolName, setSchoolName] = useState("");
   const [studyTitle, setStudyTitle] = useState("");
@@ -97,9 +98,30 @@ function Education() {
       ) : (
         // Render displayed information in view mode
         <div className="education-info">
-          <p>School Name: {schoolName}</p>
-          <p>Study Title: {studyTitle}</p>
-          <p>Study Date: {studyDate}</p>
+          <p>
+            School Name:{" "}
+            {schoolName
+              ? schoolName
+              : props.name
+              ? props.name
+              : "Edit to add your school name"}
+          </p>
+          <p>
+            Study Title:{" "}
+            {studyTitle
+              ? studyTitle
+              : props.title
+              ? props.title
+              : "Edit to add your study title"}
+          </p>
+          <p>
+            Study Date:{" "}
+            {studyDate
+              ? studyDate
+              : props.date
+              ? props.date
+              : "Edit to add your study date"}
+          </p>
           <button className="btn eduButton" onClick={() => setIsEditing(true)}>
             Edit
           </button>

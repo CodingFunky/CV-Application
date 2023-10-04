@@ -1,8 +1,9 @@
+/* eslint-disable react/prop-types */
 import { useState } from "react";
 
-function Experience() {
+function Experience(props) {
   // Define state variables for form fields, errors, and editing mode
-  const [companyName, setCompanyName] = useState("");
+  const [responsiblities, setResponsiblities] = useState("");
   const [jobTitle, setJobTitle] = useState("");
   const [startDate, setStartDate] = useState("");
   const [endDate, setEndDate] = useState("");
@@ -13,8 +14,8 @@ function Experience() {
   const validateForm = () => {
     const newErrors = {};
 
-    if (!companyName.trim()) {
-      newErrors.companyName = "Company name is required";
+    if (!responsiblities.trim()) {
+      newErrors.responsiblities = "Company name is required";
     }
 
     if (!jobTitle.trim()) {
@@ -53,8 +54,7 @@ function Experience() {
 
   return (
     <div className="education-section">
-      <h2>Educational Experience</h2>
-
+      <h2>Work Experience</h2>
       {isEditing ? (
         // Render form inputs in editing mode
         <form onSubmit={handleSubmit}>
@@ -63,8 +63,8 @@ function Experience() {
               School Name:
               <input
                 type="text"
-                value={companyName}
-                onChange={(e) => setCompanyName(e.target.value)}
+                value={responsiblities}
+                onChange={(e) => setResponsiblities(e.target.value)}
               />
             </label>
             {errors.companyName && (
@@ -113,10 +113,38 @@ function Experience() {
       ) : (
         // Render displayed information in view mode
         <div className="education-info">
-          <p>Company Name: {companyName}</p>
-          <p>Job Title: {jobTitle}</p>
-          <p>Start Date: {startDate}</p>
-          <p>End Date: {endDate}</p>
+          <p>
+            Job Title:{" "}
+            {jobTitle
+              ? jobTitle
+              : props.title
+              ? props.title
+              : "Edit to add your job title"}
+          </p>
+          <p>
+            Responsiblities:{" "}
+            {responsiblities
+              ? responsiblities
+              : props.responsiblities
+              ? props.responsiblities
+              : "Edit to add your res"}
+          </p>
+          <p>
+            Start Date:{" "}
+            {startDate
+              ? startDate
+              : props.start
+              ? props.start
+              : "Edit to add your start date"}
+          </p>
+          <p>
+            End Date:{" "}
+            {endDate
+              ? endDate
+              : props.end
+              ? props.end
+              : "Edit to add your end date"}
+          </p>
           <button className="btn eduButton" onClick={() => setIsEditing(true)}>
             Edit
           </button>
