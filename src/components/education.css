@@ -5,4 +5,12 @@
     margin: 10px;
     /* Other styles */
   }
+  .education-info {
+    position: relative;
+  }
+  .editBtn {
+    position: absolute;
+    top: 0;
+  }
+
   
