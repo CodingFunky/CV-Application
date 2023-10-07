@@ -54,7 +54,7 @@ function Experience(props) {
   };
 
   return (
-    <div className="education-section">
+    <div className="experience-section">
       {isEditing ? (
         // Render form inputs in editing mode
         <form onSubmit={handleSubmit}>
@@ -113,7 +113,7 @@ function Experience(props) {
       ) : (
         // Render displayed information in view mode
         <div
-          className="education-info"
+          className="experience-info"
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
         >
@@ -133,22 +133,24 @@ function Experience(props) {
               ? props.responsiblities
               : "Edit to add your res"}
           </p>
-          <p>
-            Start Date:{" "}
-            {startDate
-              ? startDate
-              : props.start
-              ? props.start
-              : "Edit to add your start date"}
-          </p>
-          <p>
-            End Date:{" "}
-            {endDate
-              ? endDate
-              : props.end
-              ? props.end
-              : "Edit to add your end date"}
-          </p>
+          <div className="date-container">
+            <span>
+              Start Date:{" "}
+              {startDate
+                ? startDate
+                : props.start
+                ? props.start
+                : "Edit to add your start date"}
+            </span>
+            <span>
+              End Date:{" "}
+              {endDate
+                ? endDate
+                : props.end
+                ? props.end
+                : "Edit to add your end date"}
+            </span>
+          </div>
           {isHovered && (
             <button
               className="btn editBtn eduButton"

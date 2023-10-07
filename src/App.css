@@ -20,7 +20,7 @@
 }
 .card {
   box-shadow: 0 0 12px 4px #ddd;
-  height: 100vh;
+  height: 100%;
   width: 800px;
   display: flex;
   flex-direction: column;
@@ -35,8 +35,23 @@
 .eduContainer {
   display: flex;
   justify-content: space-evenly;
+  height: 67%;
+}
+.education-section {
 }
 .expContainer {
   display: flex;
   justify-content: space-evenly;
+  height: 100%;
+}
+.experience-section {
+
+}
+.experience-info {
+  /* display: flex; */
+  /* flex-direction: column; */
+}
+.date-container {
+  display: flex;
+  flex-direction: column;
 }
